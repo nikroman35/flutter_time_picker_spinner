@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget hourMinute15Interval() {
     return TimePickerSpinner(
       spacing: 40,
-      minutesInterval: 15,
+      minutesInterval: 5,
       onTimeChange: (time) {
         setState(() {
           _dateTime = time;
