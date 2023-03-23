@@ -65,7 +65,9 @@ class TimePickerSpinnerState extends State<TimePickerSpinner> {
   TextStyle defaultHighlightTextStyle =
       const TextStyle(fontSize: 16, color: Colors.black);
   TextStyle defaultNormalTextStyle =
-      const TextStyle(fontSize: 16, color: Colors.black54);
+      const TextStyle(fontSize: 16, color: Colors.black38);
+  TextStyle defaultSecondTextStyle =
+  const TextStyle(fontSize: 16, color: Colors.black54);
   double defaultItemHeight = 48;
   double defaultItemWidth = 86;
   double defaultSpacing = 40;
@@ -82,7 +84,7 @@ class TimePickerSpinnerState extends State<TimePickerSpinner> {
   }
 
   TextStyle? _getSecondTextStyle() {
-    return widget.secondTextStyle ?? defaultNormalTextStyle;
+    return widget.secondTextStyle ?? defaultSecondTextStyle;
   }
 
   int _getHourCount() {
@@ -323,7 +325,6 @@ class TimePickerSpinnerState extends State<TimePickerSpinner> {
                 : null,
             child: Text(
               text,
-
               style: selectedIndex == index
                   ? _getHighlightedTextStyle()
                   : (index == selectedIndex + 1 || index == selectedIndex - 1)
