@@ -326,7 +326,7 @@ class TimePickerSpinnerState extends State<TimePickerSpinner> {
 
               style: selectedIndex == index
                   ? _getHighlightedTextStyle()
-                  : (index == selectedIndex + 1 || index == selectedIndex + 1)
+                  : (index == selectedIndex + 1 || index == selectedIndex - 1)
                       ? _getSecondTextStyle()
                       : _getNormalTextStyle(),
             ),
